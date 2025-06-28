@@ -8,7 +8,7 @@ const Contact: React.FC = () => (
         <h2 className="text-3xl md:text-4xl font-light text-white mb-4">Contact</h2>
         <div className="w-16 h-px bg-gray-600 mx-auto"></div>
         <p className="text-gray-300 mt-8 max-w-2xl mx-auto leading-relaxed">
-          Let's discuss how we can work together on your next project.
+          Let's discuss how I can contribute to your team or project. Feel free to reach out via email, phone, or connect with me on social media.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">

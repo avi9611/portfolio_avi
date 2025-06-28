@@ -173,29 +173,30 @@ const skillGroups = [
 ];
 
 const Skills: React.FC = () => (
-  <section id="skills" className="py-16 bg-gray-50">
-    <div className="max-w-6xl mx-auto px-6 lg:px-8">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Skills</h2>
-        <div className="w-16 h-px bg-gray-300 mx-auto"></div>
+  <section id="skills" className="py-24 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3 tracking-tight">Skills</h2>
+        <p className="text-gray-500 mb-4 text-lg">Technologies and tools I work with</p>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded mx-auto"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {skillGroups.map((group) => (
-          <div key={group.title} className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-            <h3 className="font-semibold text-lg text-gray-800 mb-3 text-center">{group.title}</h3>
-            <div className="flex flex-wrap justify-center gap-3">
+          <div key={group.title} className="bg-white/80 backdrop-blur-md p-7 rounded-2xl border border-gray-200 shadow group hover:shadow-2xl transition-all duration-300 flex flex-col items-center">
+            <h3 className="font-semibold text-xl text-gray-800 mb-4 text-center group-hover:text-blue-700 transition">{group.title}</h3>
+            <div className="flex flex-wrap justify-center gap-4">
               {group.skills.map((skill) => (
                 <div
                   key={skill.name}
                   className="flex flex-col items-center m-1"
-                  style={{ width: 72 }}
+                  style={{ width: 80 }}
                 >
-                  <div className="bg-gray-100 rounded-lg flex items-center justify-center mb-1" style={{ width: 40, height: 40 }}>
+                  <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 rounded-xl flex items-center justify-center mb-2 shadow" style={{ width: 48, height: 48 }}>
                     {skill.icon ? (
                       <img
                         src={skill.icon}
                         alt={skill.name}
-                        style={{ width: 28, height: 28, objectFit: "contain" }}
+                        style={{ width: 32, height: 32, objectFit: "contain" }}
                         loading="lazy"
                       />
                     ) : (

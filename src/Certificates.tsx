@@ -89,23 +89,27 @@ const certificates = [
 ];
 
 const Certificates: React.FC = () => (
-  <section id="certificates" className="py-20 bg-white">
-    <div className="max-w-6xl mx-auto px-6 lg:px-8">
+  <section id="certificates" className="py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Certifications</h2>
-        <div className="w-16 h-px bg-gray-300 mx-auto"></div>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3 tracking-tight">Certifications</h2>
+        <p className="text-gray-500 mb-4 text-lg">Recognitions and achievements from various platforms.</p>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded mx-auto"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {certificates.map((cert, index) => (
-          <div key={index} className="bg-gray-50 p-8 rounded-xl text-left border border-gray-100 flex flex-col h-full">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{cert.title}</h3>
-            <p className="text-gray-700 font-medium mb-1">{cert.issuer}</p>
-            <p className="text-gray-600 mb-4">{cert.description}</p>
+          <div key={index} className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-gray-200 shadow group hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+            <div className="flex items-center gap-3 mb-3">
+              <Award size={22} className="text-blue-500" />
+              <h3 className="text-lg font-semibold text-gray-800">{cert.title}</h3>
+            </div>
+            <p className="text-purple-700 font-medium mb-1">{cert.issuer}</p>
+            <p className="text-gray-600 mb-4 text-sm">{cert.description}</p>
             <a
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto inline-block text-blue-600 hover:underline font-medium"
+              className="mt-auto inline-block text-blue-700 hover:text-purple-700 font-semibold transition"
             >
               View Certificate
             </a>

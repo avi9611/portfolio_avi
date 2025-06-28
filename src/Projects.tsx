@@ -94,42 +94,56 @@ const Projects = [
 ];
 
 const ProjectsComponent: React.FC = () => (
-  <section id="projects" className="py-20 bg-gray-50">
-    <div className="max-w-6xl mx-auto px-6 lg:px-8">
+  <section id="projects" className="py-24 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Projects</h2>
-        <div className="w-16 h-px bg-gray-300 mx-auto"></div>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3 tracking-tight">Projects</h2>
+        <p className="text-gray-500 mb-4 text-lg">A showcase of my work, featuring modern stacks and clean UI.</p>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded mx-auto"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {Projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col"
+            className="group bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col"
           >
-            <div className="flex gap-1 h-44 bg-gray-100 justify-center items-center">
+            <div className="relative flex gap-1 h-48 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 justify-center items-center">
               <img
                 src={project.imageOne}
                 alt={project.title}
-                className={`object-cover rounded-md ${project.imageTwo ? "w-1/2 h-full" : "w-full h-full"}`}
-                style={{ maxHeight: "176px" }}
+                className={`object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105 ${project.imageTwo ? "w-1/2 h-full" : "w-full h-full"}`}
+                style={{ maxHeight: "192px" }}
               />
               {project.imageTwo && (
                 <img
                   src={project.imageTwo}
                   alt={project.title + " 2"}
-                  className="object-cover rounded-md w-1/2 h-full"
-                  style={{ maxHeight: "176px" }}
+                  className="object-cover rounded-lg shadow-md w-1/2 h-full transition-transform duration-300 group-hover:scale-105"
+                  style={{ maxHeight: "192px" }}
                 />
               )}
+              <div className="absolute top-2 right-2 flex gap-2">
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/80 hover:bg-blue-100 text-blue-600 rounded-full p-2 shadow transition"
+                    title="View Repo"
+                  >
+                    <Github size={18} />
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="p-5 flex flex-col flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-3 text-sm">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-3">
+            <div className="p-6 flex flex-col flex-1">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+              <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag, tagIdx) => (
                   <span
                     key={tagIdx}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
+                    className="px-2 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-xs rounded-full font-medium shadow-sm"
                   >
                     {tag}
                   </span>
@@ -140,7 +154,7 @@ const ProjectsComponent: React.FC = () => (
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-600 hover:text-blue-700 transition-colors duration-200 text-sm font-medium"
+                  className="flex items-center gap-2 text-blue-700 hover:text-purple-700 transition-colors duration-200 text-sm font-semibold"
                 >
                   <ExternalLink size={16} />
                   Repo
