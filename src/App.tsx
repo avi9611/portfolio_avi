@@ -9,6 +9,7 @@ import Certificates from './Certificates';
 import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
+import GithubBtn from './GithubBtn';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,6 +58,7 @@ function App() {
       <Certificates />
       <Contact />
       <Footer />
+        <GithubBtn />
     </div>
   );
 }

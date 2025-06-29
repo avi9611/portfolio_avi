@@ -1,5 +1,6 @@
 import React from "react";
-import { User, ExternalLink, Download, ChevronDown } from "lucide-react";
+import { ExternalLink, Download, ChevronDown } from "lucide-react";
+import SocialLinks from "./SocialLinks";
 
 const Hero: React.FC = () => (
   <section
@@ -30,6 +31,8 @@ const Hero: React.FC = () => (
             cloud-based web applications with a strong foundation in software
             testing, DevOps practices, and modern JavaScript frameworks
           </p>
+          {/* Social Links below description */}
+          <SocialLinks />
         </div>
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-14">
           <a

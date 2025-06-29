@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, MapPin, Briefcase } from 'lucide-react';
+import { MapPin, Briefcase } from 'lucide-react';
 
 const About: React.FC = () => (
   <section id="about" className="py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100">
@@ -21,7 +21,6 @@ const About: React.FC = () => (
         </div>
         <div className="order-1 lg:order-2 space-y-8">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Professional Background</h3>
             <div className="space-y-4 text-gray-700 leading-relaxed text-base">
               <p>
                 Motivated and detail-oriented Entry-level Full Stack Developer with a
