@@ -10,11 +10,11 @@ const Hero: React.FC = () => (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20">
       <div className="text-center">
         <div className="mb-8">
-          <div className="w-32 h-32 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-slate-200 via-gray-200 to-gray-300 flex items-center justify-center shadow">
+          <div className="w-36 aspect-[3/4] md:w-44 md:aspect-[3/4] lg:w-56 lg:aspect-[3/4] mx-auto mb-8 rounded-3xl bg-gradient-to-br from-slate-100 via-gray-100 to-slate-200 flex items-center justify-center shadow-xl ring-2 ring-slate-300/40">
             <img
-              src="avinash.png"
+              src="profilepic.jpg"
               alt="Avinash Poojary"
-              className="w-full h-full object-cover rounded-2xl border-2 border-slate-400 shadow-lg"
+              className="w-full h-full object-contain rounded-3xl shadow-xl mix-blend-multiply"
             />
           </div>
         </div>
@@ -27,7 +27,7 @@ const Hero: React.FC = () => (
             Avinash <span className="text-slate-500">N</span>
           </h1>
           <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-light">
-            Entry Level Full-Stack Developer specializing in building scalable
+            Entry Level Full-Stack Developer / Tester / Cloud Enthusiast specializing in building scalable
             cloud-based web applications with a strong foundation in software
             testing, DevOps practices, and modern JavaScript frameworks
           </p>
@@ -52,7 +52,10 @@ const Hero: React.FC = () => (
           </a>
         </div>
         <div className="mt-20">
-          <ChevronDown size={28} className="mx-auto text-slate-400 animate-bounce" />
+          <ChevronDown
+            size={28}
+            className="mx-auto text-slate-400 animate-bounce"
+          />
         </div>
       </div>
     </div>

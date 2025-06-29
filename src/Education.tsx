@@ -13,7 +13,12 @@ const Education: React.FC = () => (
       <div className="max-w-3xl mx-auto">
         <div className="w-full flex flex-col gap-12 border-l-4 border-gray-300 dark:border-gray-700 pl-6">
           {/* MCA */}
-          <FramerWrapper y={0} x={-100} delay={0.25} className="relative group transition-all duration-300 hover:translate-x-2">
+          <FramerWrapper
+            y={0}
+            x={-100}
+            delay={0.25}
+            className="relative group transition-all duration-300 hover:translate-x-2"
+          >
             <div className="absolute -left-8 top-1 bg-gradient-to-r from-blue-500 to-indigo-600 h-4 w-4 rounded-full shadow-md group-hover:scale-125 transition-transform duration-300 education-timeline-dot timeline-pulse"></div>
             <div className="text-lg font-semibold text-gray-700 dark:text-white mb-1">
               Oct 2022 - Sep 2024
@@ -36,7 +41,12 @@ const Education: React.FC = () => (
           </FramerWrapper>
 
           {/* BSc */}
-          <FramerWrapper y={0} x={-100} delay={0.35} className="relative group transition-all duration-300 hover:translate-x-2">
+          <FramerWrapper
+            y={0}
+            x={-100}
+            delay={0.35}
+            className="relative group transition-all duration-300 hover:translate-x-2"
+          >
             <div className="absolute -left-8 top-1 bg-gradient-to-r from-green-500 to-teal-600 h-4 w-4 rounded-full shadow-md group-hover:scale-125 transition-transform duration-300 education-timeline-dot timeline-pulse-green"></div>
             <div className="text-lg font-semibold text-gray-700 dark:text-white mb-1">
               Feb 2017 - Jul 2019

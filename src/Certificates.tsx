@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Calendar } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const certificates = [
   {

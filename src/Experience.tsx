@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -34,8 +35,12 @@ const Experience: React.FC = () => (
     </h2>
     <div className="space-y-8">
       {experiences.map((exp, idx) => (
-        <div
+        <motion.div
           key={idx}
+          initial={{ x: idx % 2 === 0 ? -80 : 80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ type: "spring", duration: 0.7, stiffness: 100 }}
           className="bg-neutral-50 dark:bg-neutral-800 rounded-2xl shadow-lg p-7 border border-neutral-200 dark:border-neutral-700 transition hover:shadow-xl"
         >
           <div className="flex items-center gap-4 mb-2">
@@ -47,7 +52,7 @@ const Experience: React.FC = () => (
             </div>
           </div>
           <p className="text-neutral-800 dark:text-neutral-200 text-[15px] leading-relaxed">{exp.desc}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   </section>
