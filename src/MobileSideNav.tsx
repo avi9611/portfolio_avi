@@ -30,7 +30,7 @@ const MobileSideNav: React.FC<MobileSideNavProps> = ({
         setShow(true);
         setVisible(true);
         if (hideTimeout.current) clearTimeout(hideTimeout.current);
-        hideTimeout.current = setTimeout(() => setVisible(false), 2000);
+        hideTimeout.current = setTimeout(() => setVisible(false), 1000);
       } else {
         setShow(false);
         setVisible(false);
