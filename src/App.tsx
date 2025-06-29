@@ -10,6 +10,7 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 import GithubBtn from './GithubBtn';
+import MobileSideNav from './MobileSideNav';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,16 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const sections = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "education", label: "Education" },
+    { id: "projects", label: "Projects" },
+    { id: "certificates", label: "Certificates" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation
@@ -49,6 +60,7 @@ function App() {
         activeSection={activeSection}
         scrolled={scrolled}
       />
+      <MobileSideNav activeSection={activeSection} sections={sections} />
       <Hero />
       <About />
       <Experience />
@@ -58,7 +70,7 @@ function App() {
       <Certificates />
       <Contact />
       <Footer />
-        <GithubBtn />
+      <GithubBtn />
     </div>
   );
 }

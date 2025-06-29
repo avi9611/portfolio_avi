@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Menu, X, MapPin, Briefcase } from "lucide-react";
+import React from "react";
+import { Menu, X } from "lucide-react";
 
 interface NavLinkProps {
   href: string;
@@ -136,7 +136,8 @@ const Navigation: React.FC<NavigationProps> = ({
           </a>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Hamburger menu hidden on mobile, replaced by MobileSideNav */}
+          <div className="lg:hidden hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-[#2e3950] transition-all duration-200"
@@ -149,76 +150,7 @@ const Navigation: React.FC<NavigationProps> = ({
     </div>
 
     {/* Mobile Navigation */}
-    {isMenuOpen && (
-      <div className="lg:hidden bg-gray-800/80 backdrop-blur-md border-t border-gray-700 rounded-b-xl">
-        <div className="px-6 pt-4 pb-6 space-y-1">
-          <NavLink
-            href="#home"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            href="#about"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            About
-          </NavLink>
-          <NavLink
-            href="#skills"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Skills
-          </NavLink>
-          <NavLink
-            href="#education"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Education
-          </NavLink>
-          <NavLink
-            href="#projects"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            href="#certificates"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Certificates
-          </NavLink>
-          <NavLink
-            href="#contact"
-            mobile
-            activeSection={activeSection}
-            setIsMenuOpen={setIsMenuOpen}
-          >
-            Contact
-          </NavLink>
-          <div className="pt-4 border-t border-gray-700">
-            <a
-              href="#contact"
-              className="flex items-center justify-center gap-2 bg-gray-800/80 text-white px-5 py-3 rounded-lg font-medium w-full border border-gray-700 shadow"
-            >
-              Get In Touch
-            </a>
-          </div>
-        </div>
-      </div>
-    )}
+    {/* Mobile menu hidden, replaced by MobileSideNav */}
   </nav>
 );
 
