@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Software Developer Intern",
     org: "GRID R & D",
-    date: "May 2024 - Present",
+    date: "May 2025 - Present",
     desc: `At GRID R & D, I am actively involved in full-stack development using the MERN stack (MongoDB, Express.js, React, Node.js). My responsibilities include developing and maintaining web applications, implementing RESTful APIs, and managing MySQL databases. I work with AWS cloud infrastructure for deployment and hosting, gaining valuable experience in cloud services. Key contributions include building responsive user interfaces, optimizing database queries, and collaborating with the team to deliver scalable solutions.`,
   },
   {
